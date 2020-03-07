@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/textures/monster-a_8.png" type="Texture" id=1]
+[ext_resource path="res://scripts/MonsterA.cs" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 8, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 8, 8 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 18.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 32, 32 )
+
+[node name="MonsterA" type="Node2D"]
+position = Vector2( 64, 64 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+position = Vector2( -64, -64 )
+scale = Vector2( 8, 8 )
+frames = SubResource( 4 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -32, -32 )
+shape = SubResource( 5 )
+
+[node name="VisibleArea" type="VisibilityNotifier2D" parent="KinematicBody2D"]
+visible = false

@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/textures/fires.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Fire.cs" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.44176, 16.7563 )
+
+[node name="Fire" type="Node2D"]
+position = Vector2( 32, 16 )
+
+[node name="StaticBody2D" type="KinematicBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+scale = Vector2( 6, 4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8, 8 )
+
+[node name="ColisionArea" type="Area2D" parent="StaticBody2D"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/ColisionArea"]
+position = Vector2( -21.1032, 5.72205e-06 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D/ColisionArea"]
+position = Vector2( 21.1032, -0.135271 )
+shape = SubResource( 1 )
+
+[node name="VisibleArea" type="VisibilityNotifier2D" parent="StaticBody2D"]

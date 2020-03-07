@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Game.cs" type="Script" id=2]
+[ext_resource path="res://MonsterA.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MonsterB.tscn" type="PackedScene" id=4]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 544, 424 )
+
+[node name="Monsters" type="Node" parent="."]
+
+[node name="MonsterA" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 704, -64 )
+
+[node name="MonsterA2" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 576, -832 )
+
+[node name="MonsterA3" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 960, -576 )
+
+[node name="MonsterA4" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 832, -576 )
+
+[node name="MonsterA5" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 704, -576 )
+
+[node name="MonsterA6" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 576, -576 )
+
+[node name="MonsterA7" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 448, -576 )
+
+[node name="MonsterA8" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 320, -576 )
+
+[node name="MonsterA9" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 192, -576 )
+
+[node name="MonsterA23" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 1024, -1280 )
+
+[node name="MonsterA22" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 896, -1280 )
+
+[node name="MonsterA21" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 768, -1280 )
+
+[node name="MonsterA20" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 640, -1280 )
+
+[node name="MonsterA19" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 512, -1280 )
+
+[node name="MonsterA18" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 384, -1280 )
+
+[node name="MonsterA17" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 256, -1280 )
+
+[node name="MonsterA16" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 128, -1280 )
+
+[node name="MonsterA31" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 1024, -1792 )
+
+[node name="MonsterA30" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 896, -1792 )
+
+[node name="MonsterA29" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 768, -1792 )
+
+[node name="MonsterA28" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 640, -1792 )
+
+[node name="MonsterA27" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 512, -1792 )
+
+[node name="MonsterA26" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 384, -1792 )
+
+[node name="MonsterA25" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 256, -1792 )
+
+[node name="MonsterA24" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 128, -1792 )
+
+[node name="MonsterA11" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 192, -64 )
+
+[node name="MonsterA12" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 320, 0 )
+
+[node name="MonsterA13" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 576, 0 )
+
+[node name="MonsterA14" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 832, 0 )
+
+[node name="MonsterA15" parent="Monsters" instance=ExtResource( 3 )]
+position = Vector2( 448, -64 )
+
+[node name="Node2D" parent="Monsters" instance=ExtResource( 4 )]
+position = Vector2( 0, -256 )
+
+[node name="Node2D2" parent="Monsters" instance=ExtResource( 4 )]
+position = Vector2( 640, 128 )
+
+[node name="Node2D3" parent="Monsters" instance=ExtResource( 4 )]
+position = Vector2( 512, -512 )
